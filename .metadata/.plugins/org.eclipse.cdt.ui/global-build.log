@@ -1,0 +1,8 @@
+22:12:11 **** Clean-only build of configuration Release for project LinkedlistInC ****
+rm -rf src/LinkedlistInC.o src/LinkedlistInC.d LinkedlistInC.exe 
+Cannot run program "rm": Launching failed
+
+Error: Program "rm" not found in PATH
+PATH=[C:\TDM-GCC-64\bin;\bin;\usr\bin;C:/Program Files/Java/jre1.8.0_131/bin/server;C:/Program Files/Java/jre1.8.0_131/bin;C:/Program Files/Java/jre1.8.0_131/lib/amd64;C:\Program Files (x86)\Python36-32\Scripts\;C:\Program Files (x86)\Python36-32\;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;C:\Program Files\Java\jdk1.8.0_91\bin;C:\Program Files\Java\jre1.8.0_91\bin;C:\TDM-GCC-64\bin;C:\Users\Abhishek\AppData\Local\Microsoft\WindowsApps;C:\Users\Abhishek\AppData\Local\.meteor\;C:\Users\Abhishek\AppData\Local\atom\bin;Z:\Softwares\eclipse-cpp-neon-3-win32-x86_64\eclipse]
+
+22:12:11 **** Clean-only build of configuration Release for project LinkedlistInC ****

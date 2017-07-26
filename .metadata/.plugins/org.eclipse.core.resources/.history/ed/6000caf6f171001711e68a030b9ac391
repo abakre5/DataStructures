@@ -1,0 +1,75 @@
+/*
+ * Headers.h
+ *
+ *  Created on: 26-Jul-2017
+ *      Author: Abhishek
+ */
+
+#ifndef HEADERS_H_
+#define HEADERS_H_
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class node{
+public:
+	int data;
+	node *next;
+	node* setData(int data);
+	int getData();
+	node* getNext();
+};
+
+node* node::setData(int data){
+	this->data = data;
+	this->next = NULL;
+	return this;
+}
+
+int node::getData(){
+	return this->data;
+}
+
+node* node::getNext(){
+	return this->next;
+}
+
+class LinkedList{
+	node *head;
+public:
+	LinkedList();
+	node* getNode(int data);
+	void createlist(void);
+	void printList(void);
+};
+
+LinkedList::LinkedList(void){
+	head = NULL;
+}
+
+node *LinkedList::getNode(int data){
+	node *n = new node;
+	return n->setData(data);
+}
+
+void LinkedList::createlist(){
+	srand(time(NULL));
+	head = getNode(rand() % 10001);
+	node *temp = head;
+	int len = 4;
+	for(int i = 0;i < len;i++){
+		temp->next = getNode(rand() % 10001);
+		temp = temp->next;
+	}
+}
+
+void LinkedList::printList(){
+	node *temp = head;
+	while(temp){
+		cout << temp->getData() << " ";
+		temp = temp->getNext();
+	}
+	cout << endl;
+}
+
+#endif /* HEADERS_H_ */

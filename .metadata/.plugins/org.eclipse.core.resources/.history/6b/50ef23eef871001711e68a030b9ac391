@@ -1,0 +1,42 @@
+/*
+ * Headers.h
+ *
+ *  Created on: 26-Jul-2017
+ *      Author: Abhishek
+ */
+
+#ifndef NODE_H_
+#define NODE_H_
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class node{
+public:
+	int data;
+	node *next;
+	node *setData(int data);
+	node *setNext(node *temp);
+	int getData();
+	node* getNext();
+};
+
+node *node::setData(int data){
+	this->data = data;
+	this->next = NULL;
+	return this;
+}
+
+node *node::setNext(node *temp){
+	return this->next = temp;
+}
+
+int node::getData(){
+	return this->data;
+}
+
+node* node::getNext(){
+	return this->next;
+}
+
+#endif /* NODE_H_ */

@@ -1,0 +1,14 @@
+//============================================================================
+// Name        : LinkedList.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include "Headers.h"
+
+int main() {
+	LinkedList l;
+	return 0;
+}
