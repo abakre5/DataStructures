@@ -1,8 +1,74 @@
-22:12:11 **** Clean-only build of configuration Release for project LinkedlistInC ****
-rm -rf src/LinkedlistInC.o src/LinkedlistInC.d LinkedlistInC.exe 
-Cannot run program "rm": Launching failed
-
-Error: Program "rm" not found in PATH
-PATH=[C:\TDM-GCC-64\bin;\bin;\usr\bin;C:/Program Files/Java/jre1.8.0_131/bin/server;C:/Program Files/Java/jre1.8.0_131/bin;C:/Program Files/Java/jre1.8.0_131/lib/amd64;C:\Program Files (x86)\Python36-32\Scripts\;C:\Program Files (x86)\Python36-32\;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;C:\Program Files\Java\jdk1.8.0_91\bin;C:\Program Files\Java\jre1.8.0_91\bin;C:\TDM-GCC-64\bin;C:\Users\Abhishek\AppData\Local\Microsoft\WindowsApps;C:\Users\Abhishek\AppData\Local\.meteor\;C:\Users\Abhishek\AppData\Local\atom\bin;Z:\Softwares\eclipse-cpp-neon-3-win32-x86_64\eclipse]
-
-22:12:11 **** Clean-only build of configuration Release for project LinkedlistInC ****
+14:58:50 **** Rebuild of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+g++ -o Trees.exe "src\\Trees.o" 
+Info: Nothing to build for Trees
+15:26:28 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+In file included from ..\src\trees.h:11:0,
+                 from ..\src\Trees.cpp:9:
+..\src\node.h: In member function 'node* Trees::getNode(int)':
+..\src\node.h:15:6: error: 'int node::data' is private
+  int data;
+      ^
+In file included from ..\src\Trees.cpp:9:0:
+..\src\trees.h:37:8: error: within this context
+  temp->data = data;
+        ^
+15:27:41 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+g++ -o Trees.exe "src\\Trees.o" 
+15:30:13 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+In file included from ..\src\Trees.cpp:9:0:
+..\src\trees.h:51:34: error: invalid use of non-static data member 'Trees::root'
+ void Trees::inOrder(node *temp = root){
+                                  ^
+..\src\trees.h:14:8: note: declared here
+  node *root;
+        ^
+15:31:22 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+g++ -o Trees.exe "src\\Trees.o" 
+15:31:36 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+g++ -o Trees.exe "src\\Trees.o" 
+15:40:03 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+g++ -o Trees.exe "src\\Trees.o" 
+15:56:59 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+g++ -o Trees.exe "src\\Trees.o" 
+16:16:36 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+g++ -o Trees.exe "src\\Trees.o" 
+16:26:40 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+g++ -o Trees.exe "src\\Trees.o" 
+18:37:01 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+g++ -o Trees.exe "src\\Trees.o" 
+18:43:23 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+g++ -o Trees.exe "src\\Trees.o" 
+Info: Nothing to build for Trees
+Info: Nothing to build for Trees
+18:46:26 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+g++ -o Trees.exe "src\\Trees.o" 
+18:47:37 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+g++ -o Trees.exe "src\\Trees.o" 

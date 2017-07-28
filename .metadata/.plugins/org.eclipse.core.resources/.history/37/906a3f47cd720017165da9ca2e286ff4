@@ -1,0 +1,20 @@
+//============================================================================
+// Name        : Trees.cpp
+// Author      : AbhishekBakare
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include "trees.h"
+
+int main() {
+	Trees t;
+	t.createTree();
+	t.inOrder(t.getRoot());
+	cout << "\nHeight Of Tree :: " << t.heightOfTree(t.getRoot()) << endl;
+	cout << "Size Of Tree :: " << t.sizeOfTree(t.getRoot()) << endl;
+	t.isBst(t.getRoot(), INT_MIN, INT_MAX) ? cout << "Tree is BST" << endl : cout << "Tree is not BST" << endl;
+	if(t.deleteFromTree(t.getRoot(), generateRandom()))	cout << "Deleted";
+	return 0;
+}

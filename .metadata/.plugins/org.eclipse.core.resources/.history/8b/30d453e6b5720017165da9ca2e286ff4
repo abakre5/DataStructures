@@ -1,0 +1,70 @@
+/*
+ * trees.h
+ *
+ *  Created on: 27-Jul-2017
+ *      Author: Abhishek
+ */
+
+#ifndef TREES_H_
+#define TREES_H_
+
+#include "node.h"
+
+class Trees{
+	node *root;
+public:
+	Trees();
+	node *getRoot(void);
+	node *insertInTree(node *temp, int data);
+	node *getNode(int data);
+	void createTree(void);
+	void inOrder(node *temp);
+	void heightOfTree(node *temp);
+};
+
+Trees::Trees(){
+	root = NULL;
+}
+
+node *Trees::getRoot(void){
+	return root;
+}
+
+node *Trees::insertInTree(node *temp, int data){
+	if(temp == NULL)	return getNode(data);
+	if(temp->getData() > data)
+		temp->setLchild(insertInTree(temp->getLchild(), data));
+	else if(temp->getData() < data)
+		temp->setRchild(insertInTree(temp->getRchild(), data));
+	return temp;
+}
+
+node *Trees::getNode(int data){
+	node *temp = new node;
+	temp->setData(data);
+	return temp;
+}
+
+void Trees::createTree(void){
+	srand(time(NULL));
+	root = getNode(generateRandom());
+	int noOfElements = generateRandom() - 1;
+	for(int i = 0;i < noOfElements;i++){
+		insertInTree(root, generateRandom());
+	}
+}
+
+void Trees::inOrder(node *temp){
+	if(temp){
+		inOrder(temp->getLchild());
+		cout << temp->getData() << " ";
+		inOrder(temp->getRchild());
+	}
+}
+
+void Trees::heightOfTree(node *temp){
+	int lHeight = 0, rheight = 0;
+	if(temp->getLchild())	lHeight = 1 + heightOfTree(temp->getLchild());
+}
+
+#endif /* TREES_H_ */

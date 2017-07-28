@@ -1,0 +1,48 @@
+/*
+ * node.h
+ *
+ *  Created on: 27-Jul-2017
+ *      Author: Abhishek
+ */
+
+#ifndef NODE_H_
+#define NODE_H_
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class node{
+	int data;
+	node *lchild;
+	node *rchild;
+public:
+	node *setData(int data);
+	void setNext(node *temp);
+	int getData();
+	node* getNext();
+};
+
+node *node::setData(int data){
+	this->data = data;
+	this->lchild = NULL;
+	this->lchild = NULL;s
+	return this;
+}
+
+void node::setLhild(node *temp){
+	this->lchild = temp;
+}
+
+int node::getData(){
+	return this->data;
+}
+
+node* node::getNext(){
+	return this->next;
+}
+
+int generateRandom(){
+	return (rand() % 10001);
+}
+
+#endif /* NODE_H_ */

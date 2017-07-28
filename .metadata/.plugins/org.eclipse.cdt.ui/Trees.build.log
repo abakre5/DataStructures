@@ -1,0 +1,7 @@
+18:47:37 **** Incremental Build of configuration Release for project Trees ****
+Info: Internal Builder is used for build
+g++ -O3 -Wall -c -fmessage-length=0 -o "src\\Trees.o" "..\\src\\Trees.cpp" 
+g++ -o Trees.exe "src\\Trees.o" 
+
+18:47:38 Build Finished (took 1s.388ms)
+

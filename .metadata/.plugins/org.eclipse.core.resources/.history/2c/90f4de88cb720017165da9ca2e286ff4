@@ -1,0 +1,104 @@
+/*
+ * trees.h
+ *
+ *  Created on: 27-Jul-2017
+ *      Author: Abhishek
+ */
+
+#ifndef TREES_H_
+#define TREES_H_
+
+#include "node.h"
+
+class Trees{
+	node *root;
+public:
+	Trees();
+	node *getRoot(void);
+	node *insertInTree(node *temp, int data);
+	node *getNode(int data);
+	void createTree(void);
+	void inOrder(node *temp);
+	int heightOfTree(node *temp);
+	int sizeOfTree(node *temp);
+	bool isBst(node *temp, int min, int max);
+	node *deleteFromTree(node *temp, int data);
+};
+
+Trees::Trees(){
+	root = NULL;
+}
+
+node *Trees::getRoot(void){
+	return root;
+}
+
+node *Trees::insertInTree(node *temp, int data){
+	if(temp == NULL)	return getNode(data);
+	if(temp->getData() > data)
+		temp->setLchild(insertInTree(temp->getLchild(), data));
+	else if(temp->getData() < data)
+		temp->setRchild(insertInTree(temp->getRchild(), data));
+	return temp;
+}
+
+node *Trees::getNode(int data){
+	node *temp = new node;
+	temp->setData(data);
+	return temp;
+}
+
+void Trees::createTree(void){
+	srand(time(NULL));
+	root = getNode(generateRandom());
+	int noOfElements = generateRandom() - 1;
+	for(int i = 0;i < noOfElements;i++){
+		insertInTree(root, generateRandom());
+	}
+}
+
+void Trees::inOrder(node *temp){
+	if(temp){
+		inOrder(temp->getLchild());
+		cout << temp->getData() << " ";
+		inOrder(temp->getRchild());
+	}
+}
+
+int Trees::heightOfTree(node *temp){
+	int lHeight = 0, rHeight = 0;
+	if(temp->getLchild())	lHeight = 1 + heightOfTree(temp->getLchild());
+	if(temp->getRchild())	rHeight = 1 + heightOfTree(temp->getRchild());
+	return lHeight > rHeight ? lHeight : rHeight;
+}
+
+int Trees::sizeOfTree(node *temp){
+	if(temp == NULL)	return 0;
+	return (sizeOfTree(temp->getLchild()) + 1 + sizeOfTree(temp->getRchild()));
+}
+
+bool Trees::isBst(node *temp, int min, int max){
+	if(temp == NULL)	return true;
+	if(temp->getData() < min || temp->getData() > max)	return true;
+	return (isBst(temp->getLchild(), min, temp->getData()) && isBst(temp->getRchild(), temp->getData(), max));
+}
+
+node *Trees::deleteFromTree(node *temp, int data){
+	if(temp == NULL)	return temp;
+	if(temp->getData() > data)	temp->setLchild(deleteFromTree(temp->getLchild(), data));
+	else if(temp->getData() < data)	temp->setRchild(deleteFromTree(temp->getRchild(), data));
+	else{
+		if(temp->getLchild() == NULL){
+			node *toBeReturn = temp->getRchild();
+			delete temp;
+			return toBeReturn;
+		}
+		else if(temp->getLchild() == NULL){
+			node *toBeReturn = temp->getRchild();
+			delete temp;
+			return toBeReturn;
+		}
+	}
+}
+
+#endif /* TREES_H_ */

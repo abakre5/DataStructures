@@ -1,0 +1,16 @@
+//============================================================================
+// Name        : Trees.cpp
+// Author      : AbhishekBakare
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include "trees.h"
+
+int main() {
+	Trees t;
+	t.createTree();
+	t.inOrder();
+	return 0;
+}
